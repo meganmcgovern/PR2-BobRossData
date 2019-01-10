@@ -4,7 +4,7 @@
  
 We are doing an analysis of Bob Ross’ work. Bob Ross is a cultural icon, and we are interested in analyzing his work and discovering trends in his paintings as the seasons progress. Data analysis will  a correlation analysis of which elements appear together most frequently, trend of elements appearing in paintings over time, and a page which returns links to episodes based on predetermined search criteria.
  
-###A link to your dataset(s) and a screenshot of the metadata if it exists:  
+### A link to your dataset(s) and a screenshot of the metadata if it exists:  
  
 https://github.com/fivethirtyeight/data/tree/master/bob-ross
 
