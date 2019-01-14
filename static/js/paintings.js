@@ -62,7 +62,7 @@ function filterData(filterValue){
 
         //IMAGES
         //##################################################
-        var selection = d3.select('.putstuffhere').select('.row').selectAll('div')
+        var selection = d3.select('#painting-table').select('.row').selectAll('div')
 
         var thumbnails = selection.data(finalArray)
             .enter()
@@ -97,10 +97,10 @@ buttonGroup.selectAll('button')
     .on('click', function(){
         var selectedValue = d3.select(this).attr('value');
 
-        d3.selectAll('.putstuffhere > .row > *').remove();
+        d3.selectAll('#painting-table > .row > *').remove();
 
         filterData(selectedValue);
-    })
+    });
 
 
 
