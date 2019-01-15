@@ -8,25 +8,25 @@ We are doing an analysis of Bob Ross’ work. Bob Ross is a cultural icon, and w
  
 https://github.com/fivethirtyeight/data/tree/master/bob-ross
 
-![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/bob_ross_data.png "Boss Ross Raw Data")
+![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/proposal/bob_ross_data.png "Boss Ross Raw Data")
  
  
 ### 3-4 screenshots of relevant "inspiring" visualizations that frame your creative fodder:
 
 Word Graph: 
-![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/Chart_01.png "wWrd Frequency Correlation Chart")
+![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/proposal/Chart_01.png "wWrd Frequency Correlation Chart")
 Time Series 1: 
-![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/Chart_2.png "Change over time chart")
+![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/proposal/Chart_2.png "Change over time chart")
 Time Series 2: 
-![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/Chart_03.png "Change over time chart")
+![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/proposal/Chart_03.png "Change over time chart")
     
 ### A sketch of the final design:  
 
-![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/Wireframe_1.png "Word frequency wireframe")
+![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/proposal/Wireframe_1.png "Word frequency wireframe")
 
-![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/Wireframe_2.png "Timeseries wireframe")
+![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/proposal/Wireframe_2.png "Timeseries wireframe")
 
-![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/Wireframe_3.png "Episode lookup wireframe")
+![alt text](https://github.com/meganmcgovern/PR2-BobRossData/blob/master/proposal/Wireframe_3.png "Episode lookup wireframe")
 
 ### A link to the primary GitHub repository you'll be housing your work in:
 https://github.com/meganmcgovern/PR2-BobRossData 
