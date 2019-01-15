@@ -7,6 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bob Ross</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+  <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+  ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="../static/js/correlation.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/css/style-painting.css">
+  
 </head>
 
 <body>
@@ -28,12 +36,50 @@
             </div>
         </div>
     </div>
+    <!-- <input id="Tree" type="button" value="Tree"/>
+    <input id="Mountain" type="button" value="Mountain" onclick="mountainFunction();" />
+    <input id="Cabin" type="button" value="Cabin" onclick="cabinFunction();" />
+    <input id="Lake" type="button" value="Lake" onclick="lakeFunction();" />
+    <input id="Clouds" type="button" value="Clouds" /> -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="../static/js/correlation.js"></script>
+    <div class="row">
+        <div class="btn-group">
+            <button type="button" class="btn" value="TREES">
+                <img id="reg" src="../static/icons/Tree-icon.png" alt="Tree" style="display: block"></img>
+                <img id="hov" src="../static/icons/Tree-icon-hover.png" alt="Tree" style="display: none"></img>
+                <img id="sel" src="../static/icons/Tree-icon-border.png" alt="Tree" style="display: none"></img>
+            </button>
+            <button type="button" class="btn" value="MOUNTAINS">
+                <img id="reg" src="../static/icons/Mountain-icon.png" alt="Mountin" style="display: block"></img>
+                <img id="hov" src="../static/icons/Mountain-icon-hover.png" alt="Mountain" style="display: none"></img>
+                <img id="sel" src="../static/icons/Mountain-icon-border.png" alt="Mountain" style="display: none"></img>
+            </button>
+            <button type="button" class="btn" value="CLOUDS">
+                <img id="reg" src="../static/icons/Cloud-icon.png" alt="Cloud" style="display: block"></img>
+                <img id="hov" src="../static/icons/Cloud-icon-hover.png" alt="Cloud" style="display: none"></img>
+                <img id="sel" src="../static/icons/Cloud-icon-border.png" alt="Cloud" style="display: none"></img>
+            </button>
+            <button type="button" class="btn" value="LAKE">
+                <img id="reg" src="../static/icons/Lake-icon.png" alt="Lake" style="display: block"></img>
+                <img id="hov" src="../static/icons/Lake-icon-hover.png" alt="Lake" style="display: none"></img>
+                <img id="sel" src="../static/icons/Lake-icon-border.png" alt="Lake" style="display: none"></img>
+            </button>
+            <button type="button" class="btn" value="CABIN">
+                <img id="reg" src="../static/icons/Cabin-icon.png" alt="Cabin" style="display: block"></img>
+                <img id="hov" src="../static/icons/Cabin-icon-hover.png" alt="Cabin" style="display: none"></img>
+                <img id="sel" src="../static/icons/Cabin-icon-border.png" alt="Cabin" style="display: none"></img>
+            </button>
+        </div>
+    </div>
+
+	<div id="myChart"></div>
+    
+    
+
 
 </body>
 
 </html>
+
+
 
