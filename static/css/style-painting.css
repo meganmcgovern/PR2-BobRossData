@@ -31,11 +31,14 @@
     text-align: center;
 }
 
+
+
 .thumbnail:hover .caption {
     display: block;
 }
 
-.btn {
+.btn
+ {
     background-color: transparent !important;
 }
 

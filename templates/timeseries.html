@@ -10,24 +10,21 @@
 </head>
 
 <body>
+    <div class = "row">
+    <nav class="navbar navbar-default">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 jumbotron text-center">
-                <h1>Bob Ross is Dope Dope Dope Homies</h1>
-                <div>
-                    <div class="col-md-4">
-                        <h3><a href="/paintings">Paintings by Element</a></h3>
-                    </div>
-                    <div class="col-md-4">
-                        <h3><a href="/element-correlation">Element Correlation</a></h3>
-                    </div>
-                    <div class="col-md-4">
-                        <h3><a href="/timeseries">Elements Over Time</a></h3>
-                    </div>   
-                </div> 
-            </div>
-        </div>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">An ode to the joy of analytics.</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="/"><img alt="Bob Ross" src="../static/icons/bob-ross-fav.png">  Home</a></li>
+        <li><a href="/paintings"><img alt="Paintings" src="../static/icons/frame-fav.png">  Paintings by Element</a></li>
+        <li><a href="/element-correlation"><img alt="Correlation" src="../static/icons/chart-fav.png">  Element Correlation</a></li>
+        <li class="active"><a href="/timeseries"><img alt="Time" src="../static/icons/time-fav.png">  Elements Over Time</a></li>
+      </ul>
     </div>
+  </nav>
+</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
