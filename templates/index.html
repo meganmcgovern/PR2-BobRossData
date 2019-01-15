@@ -1,79 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bob Ross</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="../static/css/full-slider.css" rel="stylesheet">
 
     <!-- Bob Ross Bideo CSS -->
     <link href="../static/css/bideo.css" rel="stylesheet">
+                
+    </head>
 
-  </head>
-
-  <body>
+  <body style="height:1500px">
         <div id="container">
                 <!-- Slide One - Set the background image for this slide in the line below -->
                   <video autoplay muted loop>
                           <source src="../BobRoss_intro.mp4" type="video/mp4">
                       </video>
                       <div class="overlay"></div>
-                  <div class="carousel-caption d-none d-md-block">
+                  <!-- <div class="carousel-caption d-none d-md-block">
                     <h3>Reliving Bob Ross</h3>
                     <p>An ode to the Joy of Painting.</p>
-                  </div>
+                  </div> -->
                 </div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-      <div class="container">
-        <a class="navbar-brand" href="#">Bob Ross is Dope Dope Dope Homies</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-<<<<<<< HEAD
-              <a class="nav-link" href="/">Home
-                <!-- <span class="sr-only">(current)</span> -->
-              </a>
-=======
-              <a class="nav-link" href="#">Home</a>
->>>>>>> db83c30d54a4df80a624dc230a0282921fc0ac66
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/paintings">Paintings by Element </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/element-correlation">Element Correlation </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/timeseries">Elements Over Time </a>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">An ode to the joy of analytics.</a>
       </div>
-    </nav>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="../static/vendor/jquery/jquery.min.js"></script>
-    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index_editing_3.7.7.html">Home</a></li>
+        <li><a href="paintings.html">Paintings by Element</a></li>
+        <li><a href="correlation.html">Element Correlation</a></li>
+        <li><a href="timeseries.html">Elements Over Time</a></li>
+      </ul>
+    </div>
+  </nav>
 
     <!-- Bideo Javascript -->
-    <script src="../static/js/homepage.js"></script>
-    <!-- <script src="../static/js/homepage_overlay.js"></script> -->
+    <script src="../static/js/homepage.js"></script>  
 
-  </body>
+</body>
 
 </html>
