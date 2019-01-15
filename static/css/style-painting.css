@@ -35,6 +35,10 @@
     display: block;
 }
 
+.btn {
+    background-color: transparent !important;
+}
+
 .btn:focus {
     outline: 0 !important;
 }
