@@ -19,30 +19,32 @@
 
 
   <body style="height:1500px">
-        <div id="container">
+        <div id="container" >
           <video autoplay muted loop>
               <source src="../static/BobRoss_intro.mp4" type="video/mp4">
           </video>
           <div class="overlay"></div>
         </div>
-
-
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand">An ode to the joy of analytics.</a>
+  
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">An ode to the joy of analytics.</a>
+        </div>
+        <ul class="nav navbar-nav dl-menu">
+          <li><a href="/"><img alt="Bob Ross" src="../static/icons/bob-ross-fav.png">  Home</a></li>
+          <li><a href="/paintings"><img alt="Paintings" src="../static/icons/frame-fav.png">  Paintings by Element</a></li>
+          <li><a href="/element-correlation"><img alt="Correlation" src="../static/icons/chart-fav.png">  Element Correlation</a></li>
+          <li><a href="/timeseries"><img alt="Time" src="../static/icons/time-fav.png">  Elements Over Time</a></li>
+        </ul>
       </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/"><img alt="Bob Ross" src="../static/icons/bob-ross-fav.png">  Home</a></li>
-        <li><a href="/paintings"><img alt="Paintings" src="../static/icons/frame-fav.png">  Paintings by Element</a></li>
-        <li><a href="/element-correlation"><img alt="Correlation" src="../static/icons/chart-fav.png">  Element Correlation</a></li>
-        <li><a href="/timeseries"><img alt="Time" src="../static/icons/time-fav.png">  Elements Over Time</a></li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
+
 
     <!-- Bideo Javascript -->
     <script src="../static/js/homepage.js"></script>  
+
+
 
 </body>
 
