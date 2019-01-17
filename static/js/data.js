@@ -20,7 +20,8 @@ function contains(target, pattern){
 }
 
 CLOUDS = ['CIRRUS', 'CUMULUS']
-// PLANTS = []
+FRAMES = ['APPLE_FRAME', 'CIRCLE_FRAME', 'DOUBLE_OVAL_FRAME', 'FLORIDA_FRAME', 'HALF_CIRCLE_FRAME', 'HALF_OVAL_FRAME', 'OVAL_FRAME', 
+          'RECTANGLE_3D_FRAME', 'RECTANGULAR_FRAME', 'SEASHELL_FRAME', 'SPLIT_FRAME', 'TOMB_FRAME', 'TRIPLE_FRAME', 'WINDOW_FRAME', 'WOOD_FRAMED']
 GUESTS = ['DIANE_ANDRE', 'STEVE_ROSS']
 NATURE = ['AURORA_BOREALIS', 'BEACH', 'BUSHES', 'CACTUS', 'CLIFF', 'FIRE', 'FLOWERS', 'FOG', 'GRASS', 'HILLS', 'LAKE', 'MOON', 'MOUNTAIN', 'NIGHT',
           'OCEAN', 'PALM_TREES', 'PATH', 'RIVER', 'ROCKS', 'SNOW', 'SNOWY_MOUNTAIN', 'SUN', 'WATERFALL', 'WAVES', 'WINTER']
@@ -74,9 +75,9 @@ d3.json(elementsURL).then(function(data) {
                     if (CLOUDS.includes(key)){
                         element_obj.parentId = 'CLOUDS'
                     }
-                    // else if (FRAMES.includes(key)){
-                    //             element_obj.parentId = 'FRAMES'
-                    // }
+                    else if (FRAMES.includes(key)){
+                                element_obj.parentId = 'FRAMES'
+                    }
                     else if (GUESTS.includes(key)){
                             element_obj.parentId = 'GUESTS'
                     }
@@ -125,7 +126,7 @@ d3.json(elementsURL).then(function(data) {
         //console.log(element_counts)
 
         clouds_counter = 0
-        // frames_counter = 0
+        frames_counter = 0
         guests_counter = 0
         nature_counter = 0 
         objects_counter = 0
@@ -138,9 +139,9 @@ d3.json(elementsURL).then(function(data) {
             if(CLOUDS.includes(value.arg)){
                 clouds_counter += value.val
             }
-            // if(FRAMES.includes(value.arg)){
-            //     frames_counter += value.val
-            // }
+            if(FRAMES.includes(value.arg)){
+                frames_counter += value.val
+            }
             if(GUESTS.includes(value.arg)){
                 guests_counter += value.val
             }
@@ -164,7 +165,7 @@ d3.json(elementsURL).then(function(data) {
         // console.log(trees_counter)
 
         cloud_obj = {}
-        // frames_obj = {}
+        frames_obj = {}
         guests_obj = {}
         nature_obj = {}
         objects_obj = {}
@@ -177,12 +178,12 @@ d3.json(elementsURL).then(function(data) {
 
         element_counts.unshift(cloud_obj);
 
-        // frames_obj.arg = 'FRAMES';
-        // frames_obj.val = frames_counter;
-        // frames_obj.parentId = ""
+        frames_obj.arg = 'FRAMES';
+        frames_obj.val = frames_counter;
+        frames_obj.parentId = ""
         //frames_obj.Season_num = index + 1;
 
-        // element_counts.unshift(frames_obj);
+        element_counts.unshift(frames_obj);
 
         guests_obj.arg = 'GUESTS';
         guests_obj.val = guests_counter;
@@ -221,69 +222,14 @@ d3.json(elementsURL).then(function(data) {
         //seasons_elements.push(element_counts)
     })
     
-    final_data = seasons_elements[3];
+    final_data = seasons_elements[0];
 
-    console.log(seasons_elements)
-
-    var slider = d3.select('#slider')
-    slider.on('click', function(){
-        d3.event.preventDefault()
-        var textInput = d3.select('#textInput').property('value')
-        console.log(parseInt(textInput))
-        d3.select('#chart').remove()
-        d3.select('.demo-container').append('div').attr('id', 'chart').attr('dx-chart', 'chartOptions')
-        buildChart(parseInt(textInput))
-    });
-
-    console.log(document.getElementById('textInput').value)
-
-    function buildChart(values){
+    console.log(final_data)
 
     var DemoApp = angular.module('DemoApp', ['dx']);
 
     DemoApp.controller('DemoController', function DemoController($scope, $element) {
-         $scope.value = values;
-         console.log(values)
-         console.log($scope.value)
-        // $scope.numberBoxOptions = {
-        //     min: 0,
-        //     max: 30,
-        //     showSpinButtons: true,
-        //     bindingOptions: { 
-        //         value: "value"
-        //     }
-        // };
-
-
-        // $scope.slider = {
-        //     withStep: {
-        //         min: 0,
-        //         max: 31,
-        //         value: 1,
-        //         step: 1,
-        //         tooltip: {
-        //             enabled: true
-        //         }
-        //     },
-        //     disabled: {
-        //         min: 0,
-        //         max: 31,
-        //         value: 5,
-        //         disabled: true
-        //     },
-        //     eventHandlingOptions: {
-        //         min: 0,
-        //         max: 31,
-        //         bindingOptions: { 
-        //             value: "value"
-        //         }
-        //     }
-            
-        // };
-
-        //console.log($scope.slider.eventHandlingOptions.bindingOptions.value)
-        
-        $scope.dataSource = filterData("", $scope.value);
+        $scope.dataSource = filterData("");
         $scope.isFirstLevel = true;
 
         $scope.chartOptions = {
@@ -304,7 +250,7 @@ d3.json(elementsURL).then(function(data) {
                 if ($scope.isFirstLevel) {
                     $scope.isFirstLevel = false;
                     removePointerCursor($element);
-                    $scope.dataSource = filterData(e.target.originalArgument,0);
+                    $scope.dataSource = filterData(e.target.originalArgument);
                     $scope.options = {
                         chart: {
                             xAxis: {
@@ -328,7 +274,6 @@ d3.json(elementsURL).then(function(data) {
                 return pointSettings;
             }
         };
-
         $scope.buttonOptions = {
             text: "Back",
             icon: "chevronleft",
@@ -339,27 +284,16 @@ d3.json(elementsURL).then(function(data) {
                 if (!$scope.isFirstLevel) {
                     $scope.isFirstLevel = true;
                     addPointerCursor($element);
-                    $scope.dataSource = filterData("",$scope.value);
+                    $scope.dataSource = filterData("");
                 }
             }
         };
 
         addPointerCursor($element);
-
     });
 
-};
-
-buildChart(6);
-
-    buttonGroup = d3.select('#rangeInput')
-    .on('change', function(){
-        var selectedValue = d3.select(this).attr('onchange');
-        filterData(selectedValue);
-        }); 
-
-    function filterData(name, season_number) {     
-        return seasons_elements[season_number].filter(function (item) {
+    function filterData(name) {
+        return seasons_elements[0].filter(function (item) {
             return item.parentId === name;
         });
 
@@ -367,13 +301,6 @@ buildChart(6);
         //     return item.parentId === name;
         // });
     }
-
-    // function updateTextInput(val) {
-           
-    //     d3.select('#textInput').node()=val; 
-    //     $scope.dataSource = filterData("",val);
-
-    //   }
 
     function addPointerCursor(element) {
         element.find("#chart").addClass("pointer-on-bars");
@@ -383,11 +310,9 @@ buildChart(6);
         element.find("#chart").removeClass("pointer-on-bars");
     }
 
-    
-    
+
 });
-console.log(d3.select('#textInput').node())
 
 function updateTextInput(val) {
-    document.getElementById('textInput').value=val; 
-  }
+          document.getElementById('textInput').value=val; 
+        }
