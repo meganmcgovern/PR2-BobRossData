@@ -72,8 +72,7 @@
 }
 
 .btn:focus #sel {
-
-    display: block !important;
+  display: block !important;
 }
 
 
@@ -99,4 +98,70 @@
 
 .dx-field .dx-slider {
   flex: 1;
+}
+
+/*Nav Bar Styling*/
+
+.navbar-default .navbar-nav > .home-page{
+  color:white !important;
+  background: #7e8dc7 !important;
+}
+
+.navbar-default .navbar-nav > .home-page > a {
+  color:white !important;
+  background: #7e8dc7 !important;
+}
+
+
+
+.navbar-default .navbar-nav > .not-active{
+  background: transparent !important;
+}
+
+.navbar-default .navbar-nav > .not-active > a {
+  background: transparent !important;
+}
+
+.navbar-default .navbar-nav > .not-active > a:hover {
+  color:white !important;
+  background: #dadee5 !important;
+}
+
+.navbar-default .navbar-nav > .painting-page{
+  background: #dbbca2 !important;
+}
+
+.navbar-default .navbar-nav > .painting-page > a {
+  background: #dbbca2 !important;
+}
+
+.navbar-default .navbar-nav > .painting-page > a:hover {
+  color:white !important;
+  background: #dadee5 !important;
+}
+
+.navbar-default .navbar-nav > .correlation-page{
+  background: white !important;
+}
+
+.navbar-default .navbar-nav > .correlation-page > a {
+  background: white !important;
+}
+
+.navbar-default .navbar-nav > .correlation-page > a:hover {
+  color:white !important;
+  background: #dadee5 !important;
+}
+
+.navbar-default .navbar-nav > .timeseries-page{
+  background: #f2f2f2 !important;
+}
+
+.navbar-default .navbar-nav > .timeseries-page > a {
+  background: #f2f2f2 !important;
+}
+
+.navbar-default .navbar-nav > .timeseries-page > a:hover {
+  color:white !important;
+  background: #dadee5 !important;
 }
