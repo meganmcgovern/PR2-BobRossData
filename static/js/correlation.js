@@ -1,8 +1,6 @@
 elementsURL = "/element-data"
 paintingsURL = "/painting-data"
 
-elementsURL = "/element-data"
-paintingsURL = "/painting-data"
 
 
 d3.json(elementsURL).then(function(data) {
@@ -63,7 +61,7 @@ d3.json(elementsURL).then(function(data) {
 
 
     Object.entries(data).forEach(function([key, value]){
-       if (key != 'EPISODE' && key !='TITLE') {
+       if (key != 'EPISODE' && key !='TITLE' && key !='Season') {
             element_obj = {};
 
             occurrence_counter = 0;
@@ -82,7 +80,7 @@ d3.json(elementsURL).then(function(data) {
     })
 
     Object.entries(data).forEach(function([key, value]){
-        if (key != 'EPISODE' && key !='TITLE' && key !='TREE') {
+        if (key != 'EPISODE' && key !='TITLE' && key !='TREE' && key !='Seasons') {
              element_obj = {};
  
              occurrence_counter = 0;
@@ -100,7 +98,7 @@ d3.json(elementsURL).then(function(data) {
     })
 
     Object.entries(data).forEach(function([key, value]){
-            if (key != 'EPISODE' && key !='TITLE' && key != 'MOUNTAIN') {
+            if (key != 'EPISODE' && key !='TITLE' && key != 'MOUNTAIN' && key !='Seasons') {
                  element_obj = {};
      
                  occurrence_counter = 0;
@@ -118,7 +116,7 @@ d3.json(elementsURL).then(function(data) {
         })
 
     Object.entries(data).forEach(function([key, value]){
-        if (key != 'EPISODE' && key !='TITLE' && key !='CABIN') {
+        if (key != 'EPISODE' && key !='TITLE' && key !='CABIN' && key !='Seasons') {
             element_obj = {};
          
             occurrence_counter = 0;
@@ -136,7 +134,7 @@ d3.json(elementsURL).then(function(data) {
             })
 
      Object.entries(data).forEach(function([key, value]){
-                    if (key != 'EPISODE' && key !='TITLE' && key !='LAKE') {
+                    if (key != 'EPISODE' && key !='TITLE' && key !='LAKE' && key !='Seasons') {
                         element_obj = {};
                      
                         occurrence_counter = 0;
@@ -154,7 +152,7 @@ d3.json(elementsURL).then(function(data) {
                         })
 
     Object.entries(data).forEach(function([key, value]){
-                                if (key != 'EPISODE' && key !='TITLE' && key != "CLOUDS") {
+                                if (key != 'EPISODE' && key !='TITLE' && key != "CLOUDS" && key !='Seasons') {
                                     element_obj = {};
                                  
                                     occurrence_counter = 0;
@@ -289,8 +287,8 @@ var cloudsConfig = {
 zingchart.render({
     id: 'myChart',
     data: myConfig,
-    height: 100,
-    width: '50%'
+    height: 400,
+    width: '100%'
 });
 
 
@@ -300,8 +298,8 @@ function treeFunction(){
     zingchart.render({ 
     id: 'myChart', 
     data: treeConfig,
-    height: 100,
-    width: '50%'
+    height: 400,
+    width: '100%'
 });
 }
 
@@ -311,8 +309,8 @@ function mountainFunction(){
     zingchart.render({ 
     id: 'myChart', 
     data: mountainConfig,
-    height: 100,
-    width: '50%' 
+    height: 400,
+    width: '100%' 
 });
 }
 
@@ -322,8 +320,8 @@ function cabinFunction(){
     zingchart.render({ 
     id: 'myChart', 
     data: cabinConfig,
-    height: 100,
-    width: '50%' 
+    height: 400,
+    width: '100%' 
 });
 }
 
@@ -333,8 +331,8 @@ function lakeFunction(){
     zingchart.render({ 
     id: 'myChart', 
     data: lakeConfig,
-    height: 100,
-    width: '50%' 
+    height: 400,
+    width: '100%' 
 });
 }
 
@@ -344,8 +342,8 @@ function cloudsFunction(){
     zingchart.render({ 
     id: 'myChart', 
     data: cloudsConfig,
-    height: 100,
-    width: '50%' 
+    height: 400,
+    width: '100%' 
 });
 }
 
