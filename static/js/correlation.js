@@ -61,7 +61,7 @@ d3.json(elementsURL).then(function(data) {
 
 
     Object.entries(data).forEach(function([key, value]){
-       if (key != 'EPISODE' && key !='TITLE' && key !='Season') {
+       if (key != 'EPISODE' && key !='TITLE' && key !='Seasons') {
             element_obj = {};
 
             occurrence_counter = 0;
