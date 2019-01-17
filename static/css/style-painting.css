@@ -72,13 +72,10 @@
 }
 
 .btn:focus #sel {
-<<<<<<< HEAD
+
     display: block !important;
 }
 
-=======
-  display: block !important;
-}
 
 #chart {
     height: 440px;
@@ -103,4 +100,3 @@
 .dx-field .dx-slider {
   flex: 1;
 }
->>>>>>> 81e70aefd6508bd1b0cd032af83dd95cb42a4911
