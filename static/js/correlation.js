@@ -140,7 +140,7 @@ d3.json(elementsURL).then(function(data) {
                         occurrence_counter = 0;
                      
                         Object.entries(value).forEach(function([key2, value2]){
-                            if (lake_counts.includes(key2)){
+                            if (lake_list.includes(key2)){
                             occurrence_counter += value2;
                                  }})
                      
