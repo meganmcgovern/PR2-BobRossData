@@ -20,13 +20,12 @@ function contains(target, pattern){
 }
 
 CLOUDS = ['CIRRUS', 'CUMULUS']
-// FRAMES = ['APPLE_FRAME', 'CIRCLE_FRAME', 'DOUBLE_OVAL_FRAME', 'FLORIDA_FRAME', 'HALF_CIRCLE_FRAME', 'HALF_OVAL_FRAME', 'OVAL_FRAME',
-//           'RECTANGLE_3D_FRAME', 'RECTANGULAR_FRAME', 'SEASHELL_FRAME', 'SPLIT_FRAME', 'TOMB_FRAME', 'TRIPLE_FRAME', 'WINDOW_FRAME', 'WOOD_FRAMED']
+PLANTS = ['BUSHES', 'CACTUS', 'FLOWERS', 'GRASS']
 GUESTS = ['DIANE_ANDRE', 'STEVE_ROSS']
-NATURE = ['AURORA_BOREALIS', 'BEACH', 'BUSHES', 'CACTUS', 'CLIFF', 'FIRE', 'FLOWERS', 'FOG', 'GRASS', 'HILLS', 'LAKE', 'MOON', 'MOUNTAIN', 'NIGHT',
-          'OCEAN', 'PALM_TREES', 'PATH', 'RIVER', 'ROCKS', 'SNOW', 'SNOWY_MOUNTAIN', 'SUN', 'WATERFALL', 'WAVES', 'WINTER']
+NATURE = ['BEACH', 'CLIFF', 'FIRE',  'FOG',  'HILLS', 'LAKE', 'MOON', 'MOUNTAIN', 'NIGHT',
+          'OCEAN', 'PATH', 'RIVER', 'ROCKS', 'SNOW', 'SUN', 'WATERFALL', 'WAVES', 'WINTER']
 OBJECTS = ['BARN', 'BOAT', 'BRIDGE', 'BUILDING', 'CABIN', 'DOCK', 'FARM', 'FENCE', 'LIGHTHOUSE', 'MILL', 'STRUCTURE', 'WINDMILL']
-TREES = ['CONIFER', 'DECIDUOUS']
+TREES = ['CONIFER', 'DECIDUOUS','PALM_TREES']
 
 d3.json(elementsURL).then(function(data) {
 
@@ -46,24 +45,17 @@ d3.json(elementsURL).then(function(data) {
         seasons_list.push(current_season)
     };
 
-
-    //console.log(seasons_list);
-
     seasons_elements = [];
     seasons_list.forEach(function(season_episode, index){
-        //console.log(season_episode)
         element_counts = []
         season_obj = {}
         Object.entries(data).forEach(function([key, value]){
-            //console.log(key)
-            //console.log(value)
             if (key != 'EPISODE' && key !='TITLE' && key != 'Seasons') {
                     element_obj = {};
 
                     occurrence_counter = 0;
 
                     Object.entries(value).forEach(function([key2, value2]){
-                        //console.log(key2)
                         if (season_episode.includes(key2)) {
                             occurrence_counter += value2;
                         }
@@ -75,9 +67,9 @@ d3.json(elementsURL).then(function(data) {
                     if (CLOUDS.includes(key)){
                         element_obj.parentId = 'CLOUDS'
                     }
-                    // else if (FRAMES.includes(key)){
-                    //             element_obj.parentId = 'FRAMES'
-                    // }
+                    else if (PLANTS.includes(key)){
+                                element_obj.parentId = 'PLANTS'
+                    }
                     else if (GUESTS.includes(key)){
                             element_obj.parentId = 'GUESTS'
                     }
@@ -93,45 +85,16 @@ d3.json(elementsURL).then(function(data) {
                     else{
                         element_obj.parentId = 'NONE'
                     }
-
-                    //element_obj.Season_num = index + 1;
-                    //element_obj[key] = occurrence_counter
-
-                    //console.log(element_obj)
-
                     element_counts.push(element_obj);
             }
-            // console.log(element_counts)
-
-            // clouds_counter = 0
-            // frames_counter = 0
-            // guests_counter = 0
-            // nature_counter = 0
-            // objects_counter = 0
-            // trees_counter = 0
-
-            // if (season_episode.includes(key2)) {
-            //     occurrence_counter += value2;
-            // }
-
-
-            // console.log(clouds_counter)
-            // console.log(frames_counter)
-            // console.log(guests_counter)
-            // console.log(nature_counter)
-            // console.log(objects_counter)
-            // console.log(trees_counter)
         })
 
-        //console.log(element_counts)
-
         clouds_counter = 0
-        // frames_counter = 0
+        plants_counter = 0
         guests_counter = 0
         nature_counter = 0
         objects_counter = 0
         trees_counter = 0
-
 
 
         Object.entries(element_counts).forEach(function([key, value]){
@@ -139,9 +102,9 @@ d3.json(elementsURL).then(function(data) {
             if(CLOUDS.includes(value.arg)){
                 clouds_counter += value.val
             }
-            // if(FRAMES.includes(value.arg)){
-            //     frames_counter += value.val
-            // }
+            if(PLANTS.includes(value.arg)){
+                plants_counter += value.val
+            }
             if(GUESTS.includes(value.arg)){
                 guests_counter += value.val
             }
@@ -157,15 +120,8 @@ d3.json(elementsURL).then(function(data) {
 
         });
 
-        // console.log(clouds_counter)
-        // console.log(frames_counter)
-        // console.log(guests_counter)
-        // console.log(nature_counter)
-        // console.log(objects_counter)
-        // console.log(trees_counter)
-
         cloud_obj = {}
-        // frames_obj = {}
+        plants_obj = {}
         guests_obj = {}
         nature_obj = {}
         objects_obj = {}
@@ -178,12 +134,12 @@ d3.json(elementsURL).then(function(data) {
 
         element_counts.unshift(cloud_obj);
 
-        // frames_obj.arg = 'FRAMES';
-        // frames_obj.val = frames_counter;
-        // frames_obj.parentId = ""
-        //frames_obj.Season_num = index + 1;
+        plants_obj.arg = 'PLANTS';
+        plants_obj.val = plants_counter;
+        plants_obj.parentId = ""
+        // frames_obj.Season_num = index + 1;
 
-        // element_counts.unshift(frames_obj);
+        element_counts.unshift(plants_obj);
 
         guests_obj.arg = 'GUESTS';
         guests_obj.val = guests_counter;
