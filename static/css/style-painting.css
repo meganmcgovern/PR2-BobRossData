@@ -103,53 +103,50 @@
 /*Nav Bar Styling*/
 
 .navbar-default .navbar-nav > .home-page{
-  color:white !important;
-  background: #7e8dc7 !important;
+  background: #f2f2f2 !important;
 }
 
 .navbar-default .navbar-nav > .home-page > a {
-  color:white !important;
-  background: #7e8dc7 !important;
+  background: #f2f2f2 !important;
 }
 
-
+.navbar-default .navbar-nav > .home-page > a:hover {
+  background: #dadee5 !important;
+}
 
 .navbar-default .navbar-nav > .not-active{
   background: transparent !important;
 }
 
 .navbar-default .navbar-nav > .not-active > a {
-  background: transparent !important;
+  background: #f2f2f2 !important;
 }
 
 .navbar-default .navbar-nav > .not-active > a:hover {
-  color:white !important;
   background: #dadee5 !important;
 }
 
 .navbar-default .navbar-nav > .painting-page{
-  background: #dbbca2 !important;
+  background: #f2f2f2 !important;
 }
 
 .navbar-default .navbar-nav > .painting-page > a {
-  background: #dbbca2 !important;
+  background: #f2f2f2 !important;
 }
 
 .navbar-default .navbar-nav > .painting-page > a:hover {
-  color:white !important;
   background: #dadee5 !important;
 }
 
 .navbar-default .navbar-nav > .correlation-page{
-  background: white !important;
+  background: #f2f2f2 !important;
 }
 
 .navbar-default .navbar-nav > .correlation-page > a {
-  background: white !important;
+  background: #f2f2f2 !important;
 }
 
 .navbar-default .navbar-nav > .correlation-page > a:hover {
-  color:white !important;
   background: #dadee5 !important;
 }
 
@@ -162,6 +159,5 @@
 }
 
 .navbar-default .navbar-nav > .timeseries-page > a:hover {
-  color:white !important;
   background: #dadee5 !important;
 }
